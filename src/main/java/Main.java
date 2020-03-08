@@ -1,10 +1,15 @@
+import pl.sda.wyjatki.EmailException;
+import pl.sda.wyjatki.User;
+
 import java.util.Scanner;
 
 public class Main{
-        public  static  void  main(String[]  args) {
-            int tab[] = {1, 2, 3, 4, 5};
 
-            Scanner odczyt = new Scanner(System.in);
+
+    public  static  void  main(String[]  args) {
+           /*   int tab[] = {1, 2, 3, 4, 5};
+
+          Scanner odczyt = new Scanner(System.in);
             int index = -1;
 
             System.out.println("Podaj indeks tablicy, który chcesz zobaczyć: ");
@@ -14,7 +19,17 @@ public class Main{
                 System.out.println(tab[index]);
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("Niepoprawny  parametr,  rozmiar  tablicy  to:  " + tab.length);
-            }
+            } */
 
+        User user = new User();
+
+
+        try {
+            user.setEmail("email");
+        } catch (EmailException e) {
+            e.printStackTrace();
         }
+
+
+    }
 }
